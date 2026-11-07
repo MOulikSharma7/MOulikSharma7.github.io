@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moulik Sharma | AI Engineer</title>
+<meta name="description" content="Moulik Sharma is an Agentic AI Software Engineer building multi-agent systems, LLM platforms and GraphRAG pipelines.">
+<meta name="theme-color" content="#4338ca">
+<link rel="canonical" href="https://mouliksharma7.github.io/">
+<meta property="og:title" content="Moulik Sharma | AI Engineer">
+<meta property="og:description" content="Multi-agent systems, LLM control planes and GraphRAG. Portfolio of Moulik Sharma.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mouliksharma7.github.io/">
+<meta property="og:image" content="https://mouliksharma7.github.io/assets/profile.jpg">
+<meta property="og:image:alt" content="Portrait of Moulik Sharma">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/profile.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --ink: #1c1b22;
+    --muted: #5d5b69;
+    --line: #e7e4dc;
+    --accent: #4338ca;
+    --accent-soft: #eceafd;
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(28,27,34,.04), 0 8px 24px rgba(28,27,34,.06);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible { outline: 3px solid #818cf8; outline-offset: 4px; border-radius: 4px; }
+  ::selection { background: var(--accent-soft); color: var(--ink); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+  .skip-link {
+    position: fixed; top: 10px; left: 10px; z-index: 100;
+    padding: 10px 14px; border-radius: 8px; background: var(--ink); color: #fff;
+    transform: translateY(-150%); transition: transform .15s;
+  }
+  .skip-link:focus { transform: translateY(0); }
+
+  /* Nav */
+  header.nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(251,250,247,.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { font-weight: 700; font-size: 1.15rem; letter-spacing: -.01em; }
+  .logo span { color: var(--accent); }
+  nav ul { display: flex; gap: 26px; list-style: none; }
+  nav a { font-size: .92rem; color: var(--muted); font-weight: 500; transition: color .15s; }
+  nav a:hover { color: var(--accent); }
+
+  /* Hero */
+  .hero { padding: 96px 0 72px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: center; }
+  .eyebrow {
+    display: inline-block; font-family: "JetBrains Mono", monospace; font-size: .8rem;
+    color: var(--accent); background: var(--accent-soft);
+    padding: 6px 12px; border-radius: 999px; margin-bottom: 22px;
+  }
+  h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.1; letter-spacing: -.03em; margin-bottom: 18px; }
+  h1 em { font-style: normal; color: var(--accent); }
+  .lead { font-size: 1.1rem; color: var(--muted); max-width: 540px; margin-bottom: 30px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: 10px; font-weight: 600; font-size: .95rem;
+    border: 1px solid var(--line); background: var(--surface); transition: all .15s;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn.primary:hover { background: #3730a3; color: #fff; }
+  .stats {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow); padding: 28px;
+  }
+  .avatar {
+    width: 72px; height: 72px; border-radius: 50%;
+    object-fit: cover; background: #fff; border: 3px solid var(--accent-soft);
+    display: block; margin-bottom: 18px;
+  }
+  .stats h3 { font-size: 1.1rem; }
+  .stats p { color: var(--muted); font-size: .92rem; }
+  .facts { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); display: grid; gap: 10px; font-size: .92rem; }
+  .facts div { display: flex; justify-content: space-between; gap: 12px; }
+  .facts span:first-child { color: var(--muted); }
+  .facts span:last-child { font-weight: 600; text-align: right; }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  section + section { border-top: 1px solid var(--line); }
+  .kicker { font-family: "JetBrains Mono", monospace; font-size: .8rem; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; }
+  h2 { font-size: 2rem; letter-spacing: -.02em; margin: 8px 0 32px; }
+  .about p { max-width: 720px; color: var(--muted); font-size: 1.05rem; margin-bottom: 14px; }
+
+  /* Projects */
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 26px; display: flex; flex-direction: column; box-shadow: var(--shadow);
+    transition: transform .18s, border-color .18s;
+  }
+  .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+  .card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+  .card p { color: var(--muted); font-size: .94rem; flex: 1; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 16px; }
+  .tag {
+    font-family: "JetBrains Mono", monospace; font-size: .72rem;
+    background: var(--accent-soft); color: var(--accent);
+    padding: 4px 9px; border-radius: 6px;
+  }
+  .card a.link { font-weight: 600; font-size: .9rem; color: var(--accent); }
+  .card a.link:hover { text-decoration: underline; }
+
+  /* Timeline */
+  .job { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; box-shadow: var(--shadow); }
+  .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px; margin-bottom: 16px; }
+  .job-head h3 { font-size: 1.2rem; }
+  .job-head .co { color: var(--muted); font-size: .95rem; }
+  .job-head .when { font-family: "JetBrains Mono", monospace; font-size: .82rem; color: var(--accent); }
+  .job ul { padding-left: 20px; display: grid; gap: 10px; color: var(--muted); }
+  .job li::marker { color: var(--accent); }
+  .job strong { color: var(--ink); font-weight: 600; }
+
+  /* Skills */
+  .skill-groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .skill-group { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .skill-group h3 { font-size: .95rem; margin-bottom: 14px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { font-size: .85rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); font-weight: 500; }
+
+  /* Education */
+  .edu { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 30px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; box-shadow: var(--shadow); }
+  .edu h3 { font-size: 1.1rem; }
+  .edu p { color: var(--muted); font-size: .95rem; }
+  .edu .when { font-family: "JetBrains Mono", monospace; font-size: .82rem; color: var(--accent); }
+
+  /* Contact */
+  .contact-box {
+    background: linear-gradient(135deg, #4338ca, #6366f1);
+    color: #fff; border-radius: 20px; padding: 56px 40px; text-align: center;
+  }
+  .contact-box h2 { color: #fff; margin: 0 0 12px; }
+  .contact-box p { color: #e0e7ff; max-width: 520px; margin: 0 auto 28px; }
+  .contact-box .btn { background: #fff; color: var(--accent); border-color: #fff; }
+  .contact-box .btn:hover { background: #eef2ff; }
+  .contact-box .btn.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.5); }
+  .contact-box .btn.ghost:hover { background: rgba(255,255,255,.12); }
+  .contact-box .btns { justify-content: center; }
+
+  footer { padding: 32px 0 48px; text-align: center; color: var(--muted); font-size: .88rem; border-top: 1px solid var(--line); }
+
+  @media (max-width: 860px) {
+    .hero { padding: 56px 0 48px; }
+    .hero .wrap { grid-template-columns: 1fr; }
+    .grid { grid-template-columns: 1fr; }
+    .skill-groups { grid-template-columns: 1fr; }
+    nav ul { gap: 16px; }
+    .contact-box { padding: 40px 24px; }
+  }
+  @media (max-width: 520px) {
+    nav li.hide-sm { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    .card:hover, .btn:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Moulik Sharma, home">Moulik<span>.</span></a>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li class="hide-sm"><a href="#experience">Experience</a></li>
+        <li class="hide-sm"><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+  <!-- Hero -->
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Agentic AI Software Engineer</span>
+        <h1>Hi, I'm Moulik. I build <em>multi-agent AI systems</em> that work in production.</h1>
+        <p class="lead">I design LLM platforms, agent workflows and retrieval pipelines, with a focus on secure, observable and well-governed AI.</p>
+        <div class="btns">
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn" href="assets/Moulik_Sharma_Resume.pdf" target="_blank" rel="noopener" download>Resume</a>
+          <a class="btn" href="https://github.com/MOulikSharma7" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <aside class="stats" aria-label="Profile summary">
+        <img class="avatar" src="assets/profile.jpg" alt="Portrait of Moulik Sharma" width="72" height="72" fetchpriority="high">
+        <h3>Moulik Sharma</h3>
+        <p>AI Engineer, Bengaluru</p>
+        <div class="facts">
+          <div><span>Currently</span><span>Cognizant</span></div>
+          <div><span>Focus</span><span>Agents, LLMOps, GraphRAG</span></div>
+          <div><span>Education</span><span>B.Tech CS &amp; AIML</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="wrap">
+      <div class="kicker">About</div>
+      <h2>What I do</h2>
+      <p>I'm an Agentic AI Software Engineer working on multi-agent workflows for enterprise teams. My day-to-day covers architecture, secure agent-to-agent communication, evaluation and the dashboards that keep LLM systems honest.</p>
+      <p>Outside of work I build open projects around autonomous IT operations, LLM control planes and knowledge graphs. I'm also building a tabletop ordering platform for restaurants and hotels.</p>
+      <p>I like systems that are measurable: clear metrics, tracing, and no surprises in production.</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="kicker">Projects</div>
+      <h2>Selected work</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>RevOps 2.0</h3>
+          <p>Autonomous multi-agent framework for IT operations. A LangGraph orchestrator coordinates database, log-retrieval, root-cause-analysis and remediation agents over local Ollama LLMs, with short- and long-term memory.</p>
+          <div class="tags"><span class="tag">LangGraph</span><span class="tag">Ollama</span><span class="tag">Python</span><span class="tag">Multi-agent</span></div>
+          <a class="link" href="https://github.com/MOulikSharma7/RevOps_2.0" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+        </article>
+        <article class="card">
+          <h3>Helm 3.0</h3>
+          <p>Production-grade LLM control plane with semantic caching, Presidio PII detection, Llama Guard safety checks, OpenTelemetry tracing, token-usage tracking and Grafana dashboards.</p>
+          <div class="tags"><span class="tag">LLMOps</span><span class="tag">OpenTelemetry</span><span class="tag">Grafana</span><span class="tag">Presidio</span></div>
+          <a class="link" href="https://github.com/MOulikSharma7/Helm_3.0" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+        </article>
+        <article class="card">
+          <h3>Multi-Source Knowledge Graph</h3>
+          <p>Hybrid GraphRAG proof of concept. Builds a unified Neo4j knowledge graph from PostgreSQL, MongoDB and free text using parallel LLM extraction, then answers questions with vector search plus graph traversal.</p>
+          <div class="tags"><span class="tag">Neo4j</span><span class="tag">GraphRAG</span><span class="tag">PostgreSQL</span><span class="tag">MongoDB</span></div>
+          <a class="link" href="https://github.com/MOulikSharma7/Multi-Source-Knowledge-Graph" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="kicker">Experience</div>
+      <h2>Where I've worked</h2>
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <h3>Agentic AI Software Engineer</h3>
+            <div class="co">Cognizant &middot; Client: Charter Communications</div>
+          </div>
+          <div class="when">Aug 2025 &ndash; Present</div>
+        </div>
+        <ul>
+          <li>Designed the <strong>authentication and authorization model</strong> for a multi-agent workflow platform: OAuth-style user-to-agent auth, AD-based agent-to-agent and service-to-agent auth, and row-level data authorization.</li>
+          <li>Built a <strong>canonical authorization context</strong>. The API validates the JWT, extracts identity and a signed envelope travels with each request and is verified at every sub-agent entry point.</li>
+          <li>Rolled it out across <strong>9 agents plus an API, adopted by 5 teams</strong>, with no data leakage to unauthorized users.</li>
+          <li>Worked on a <strong>knowledge graph and ontology</strong> layer, plus <strong>token-usage tracking and evaluation-agent dashboards</strong>, and documented agent performance, design decisions and eval results.</li>
+          <li>Run daily syncs with the US client team covering progress, architecture reviews and brainstorming, and lead technical enablement sessions for client teams.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="kicker">Skills</div>
+      <h2>Tools I work with</h2>
+      <div class="skill-groups">
+        <div class="skill-group">
+          <h3>Agents &amp; LLMs</h3>
+          <div class="chips"><span class="chip">LangGraph</span><span class="chip">LlamaIndex</span><span class="chip">RAG / GraphRAG</span><span class="chip">Ollama</span><span class="chip">Human-in-the-loop</span></div>
+        </div>
+        <div class="skill-group">
+          <h3>Languages &amp; APIs</h3>
+          <div class="chips"><span class="chip">Python</span><span class="chip">Java</span><span class="chip">SQL</span><span class="chip">FastAPI</span><span class="chip">Pydantic</span></div>
+        </div>
+        <div class="skill-group">
+          <h3>Data &amp; Storage</h3>
+          <div class="chips"><span class="chip">Neo4j</span><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">Databricks</span><span class="chip">Airflow</span></div>
+        </div>
+        <div class="skill-group">
+          <h3>Cloud &amp; Ops</h3>
+          <div class="chips"><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">Docker</span><span class="chip">OpenTelemetry</span><span class="chip">Grafana</span><span class="chip">MLflow</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <div class="wrap">
+      <div class="kicker">Education</div>
+      <h2>Academic background</h2>
+      <div class="edu">
+        <div>
+          <h3>B.Tech in Computer Science &amp; AIML</h3>
+          <p>R.G.P.V. University</p>
+        </div>
+        <div class="when">2021 &ndash; 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <h2>Let's build something</h2>
+        <p>I'm open to conversations about AI engineering roles, collaborations and interesting projects.</p>
+        <div class="btns">
+          <a class="btn" href="mailto:mouliksharmamms@gmail.com">Email me</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/moulik-sharma-44b2a7253/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/MOulikSharma7" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Moulik Sharma</div>
+</footer>
+
+</body>
+</html>
